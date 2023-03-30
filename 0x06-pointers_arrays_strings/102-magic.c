@@ -21,4 +21,7 @@ int main(void)
   printf("a[2] = %d\n", a[2]);
   return (0);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e1ff0c3fe22290393349dbc85d554c463b919b05
