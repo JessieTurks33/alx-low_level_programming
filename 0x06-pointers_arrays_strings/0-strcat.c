@@ -1,64 +1,33 @@
 #include "main.h"
-<<<<<<< HEAD
+
 /**
- * _strcat - concatenates two strings
- * @dest: input value
- * @src: input value
+ * _strcat - Concatenates two strings
+ * @dest: The destination string
+ * @src: The source string
  *
- * Return: void
+ * Return: Pointer to the resulting string
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	int dest_len = 0;
+	int src_len = 0;
+	int i, j;
 
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (src[j] != '\0')
-	{
+	/* Calculate the length of the destination string */
+	while (dest[dest_len] != '\0')
+		dest_len++;
+
+	/* Calculate the length of the source string */
+	while (src[src_len] != '\0')
+		src_len++;
+
+	/* Append the source string to the destination string */
+	for (i = dest_len, j = 0; j < src_len; i++, j++)
 		dest[i] = src[j];
-		i++;
-		j++;
-	}
 
+	/* Add null terminator to the resulting string */
 	dest[i] = '\0';
+
 	return (dest);
 }
 
-=======
-
-/**
- * *_strcat - function commute srtings
- * @dest: param pointer to a char
- * @src: param pointer to a char
- * Return: return value of dest
- */
-
-char *_strcat(char *dest, char *src)
-{
-int i;
-int j;
-
-i = 0;
-j = 0;
-
-while (dest[i] != '\0')
-{
-i++;
-}
-
-while (src[j] != '\0')
-{
-dest[i] = src[j];
-j++;
-i++;
-}
-
-dest[i] = '\0';
-return (dest);
-}
->>>>>>> e1ff0c3fe22290393349dbc85d554c463b919b05
